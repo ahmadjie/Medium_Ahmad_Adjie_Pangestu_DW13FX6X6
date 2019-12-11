@@ -22,11 +22,9 @@ const useStyles = makeStyles(theme => ({
         margin: 7,
         itemAlign: 'left',
         justifyContent: 'left',
-
     },
     media: {
         height: 140,
-
     },
     cover: {
         width: 151,
@@ -57,7 +55,6 @@ export default function PopularArticles() {
                 </Grid>
                 <Grid container item xs={2} >
                     <Card className={classes.card}>
-                    
                         <CardMedia className={classes.cover} image="http://hdqwalls.com/wallpapers/fire-minimalist-1f.jpg" title="Live from space album cover" style={{ itemAlign: 'right', justifyContent: 'right' }}/>
                     </Card>
                 </Grid>
@@ -110,18 +107,10 @@ export default function PopularArticles() {
                 <Divider />
                 <Grid container direction="row" justifyContent="left" alignItems="left" item xs={12}>
                     <Grid container direction="row" justifyContent="left" alignItems="left" item xs={3} style={{ justifyContent: 'center' }}>
-                        <h1 style={{ justifyContent: 'center', color: '#bdbdbd' }}>
-                            01
-                            </h1>
-                        <h1 style={{ justifyContent: 'center', color: '#bdbdbd' }}>
-                            02
-                            </h1>
-                        <h1 style={{ justifyContent: 'center', color: '#bdbdbd' }}>
-                            03
-                            </h1>
-                        <h1 style={{ justifyContent: 'center', color: '#bdbdbd' }}>
-                            04
-                            </h1>
+                        <h1 style={{ justifyContent: 'center', color: '#bdbdbd' }}>01</h1>
+                        <h1 style={{ justifyContent: 'center', color: '#bdbdbd' }}>02</h1>
+                        <h1 style={{ justifyContent: 'center', color: '#bdbdbd' }}>03</h1>
+                        <h1 style={{ justifyContent: 'center', color: '#bdbdbd' }}>04</h1>
                     </Grid>
                     <Grid container direction="row" justifyContent="left" alignItems="left"item xs={9}>
                         <p style={{ fontSize: '12px', fontWeight: 'bold' }}>

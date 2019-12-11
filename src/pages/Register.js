@@ -16,16 +16,6 @@ import Button from '@material-ui/core/Button';
 import logo from '../img/medium.svg';
 
 
-const formStyles = makeStyles(theme => ({
-    root: {
-        '& > *': {
-            margin: theme.spacing(1),
-            width: 200,
-
-        },
-    },
-}));
-
 const cardStyles = makeStyles({
     card: {
         minWidth: 275,
@@ -48,24 +38,18 @@ const typographyStyles = makeStyles({
         width: '100%',
         maxWidth: 500,
     },
-});
+});        
 
-export default function Register() {
-    const formClasses = formStyles();
-    const cardClasses = cardStyles();
-    const bull = <span className={cardClasses.bullet}>•</span>;
-    const typographyClasses = typographyStyles();
-
-    render(); {
-        return (
-
+export default class Register extends Component {
+    render() {
+        return(
             <div>
                 <Grid container direction="column" justify="center" alignItems="center">
-                    <Card className={cardClasses.card} style={{ marginTop: "75px" }}>
+                    <Card className={cardStyles.card} style={{ marginTop: "75px" }}>
                         <CardContent>
                             <Grid container direction="column" justify="center" alignItems="center">
-                                <form className={formClasses.root} noValidate autoComplete="off" fullWidth style={{ textAlign: "center", itemAlign: "center" }}>
-                                    <div className={typographyClasses.root} >
+                                <form noValidate autoComplete="off" fullWidth style={{ textAlign: "center", itemAlign: "center" }}>
+                                    <div style={{width:"70%", margin:"auto"}}>
                                         <Typography variant="h4" gutterBottom>
                                             Join Medium
                                         </Typography>
@@ -73,11 +57,11 @@ export default function Register() {
                                             Create an account to receive great stories in your inbox, personalize your homepage, and follow authors and topics that you love.
                                         </Typography>
                                     </div>
-                                    <TextField id="standard-basic" label="Fullname" required fullWidth /><br />
+                                    <TextField id="standard-basic" label="Fullname" required /><br />
                                     <TextField id="standard-basic" label="Username" required /><br />
-                                    <TextField id="standard-basic" label="Password" required type="password" /><br />
+                                    <TextField id="standard-basic" label="Password" required type="password" style={{marginBottom:"20px"}}/><br />
                                     <Button variant="outlined">Signup</Button>
-                                    <div className={typographyClasses.root} >
+                                    <div className={typographyStyles.root} >
                                         <p>
                                             Already have an account? <Link to="/login" style={{ textDecoration: "none", color: "black" }} required>Login</Link>
                                         </p>
@@ -94,4 +78,3 @@ export default function Register() {
         );
     }
 }
-

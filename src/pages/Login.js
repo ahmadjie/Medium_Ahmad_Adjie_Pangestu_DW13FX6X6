@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {
     BrowserRouter as Router,
     Switch,
@@ -15,30 +15,10 @@ import Button from '@material-ui/core/Button';
 import logo from '../img/medium.svg';
 
 
-const formStyles = makeStyles(theme => ({
-    root: {
-        '& > *': {
-            margin: theme.spacing(1),
-            width: 200,
-
-        },
-    },
-}));
 
 const cardStyles = makeStyles({
     card: {
         minWidth: 275,
-    },
-    bullet: {
-        display: 'inline-block',
-        margin: '0 2px',
-        transform: 'scale(0.8)',
-    },
-    title: {
-        fontSize: 14,
-    },
-    pos: {
-        marginBottom: 12,
     },
 });
 
@@ -49,32 +29,27 @@ const typographyStyles = makeStyles({
     },
 });
 
-export default function Register() {
-    const formClasses = formStyles();
-    const cardClasses = cardStyles();
-    const bull = <span className={cardClasses.bullet}>•</span>;
-    const typographyClasses = typographyStyles();
-
-    render(); {
+export default class Register extends Component {
+    render() {
         return (
-            <div>
-                <Grid container direction="column" justify="center" alignItems="center">
-                    <Card className={cardClasses.card} style={{ marginTop: "100px" }}>
+          
+                <Grid container direction="column" justify="center" alignItems="center" style = {{width : "100%",margin :"auto"}}>
+                    <Card className={cardStyles.card} style={{ marginTop: "100px" }}>
                         <CardContent>
                             <Grid container direction="column" justify="center" alignItems="center">
-                                <form className={formClasses.root} noValidate autoComplete="off" fullWidth style={{ textAlign: "center", itemAlign: "center" }}>
-                                    <div className={typographyClasses.root} >
+                                <form  noValidate autoComplete="off" fullWidth style={{ textAlign: "center", itemAlign: "center" }}>
+                                    <div style = {{width:"70%", margin:"auto"}}>
                                         <Typography variant="h4" gutterBottom>
                                             Sign in with username
                                         </Typography>
                                         <Typography variant="caption" display="block" gutterBottom >
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint quis cumque accusamus eius, quia velit inventore neque perspiciatis commodi beatae officiis quod temporibus suscipit et quo vel laboriosam vero ipsam?
+                                            Enter the email address essociated with your account, and we'll send a magic link to your inbox
                                         </Typography>
                                     </div>
                                     <TextField id="standard-basic" label="Username" required /><br />
                                     <TextField id="standard-basic" label="Password" required type="password" /><br />
-                                    <Button variant="outlined">Login</Button>
-                                    <div className={typographyClasses.root} >
+                                    <Button variant="outlined" style = {{marginTop:"5%"}}>Login</Button>
+                                    <div className={typographyStyles.root} >
                                         <p>
                                            Don't have an account? <Link to="/register" style={{ textDecoration: "none", color: "black" }} required>Register</Link>
                                         </p>
@@ -87,8 +62,6 @@ export default function Register() {
                         </CardContent>
                     </Card>
                 </Grid>
-            </div>
-
         );
     }
 }

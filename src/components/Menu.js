@@ -72,7 +72,7 @@ export default function Menu() {
                         scrollButtons="auto"
                         aria-label="scrollable auto tabs example"
                     >
-                        <Link to="/login" style={{textDecoration:"none",color:"black"}}>
+                        <Link to="/categorypages" style={{textDecoration:"none",color:"black"}}>
                             <Tab label="OneZero" {...a11yProps(0)} />
                         </Link>
                         <Tab label="Elemental" {...a11yProps(1)} />

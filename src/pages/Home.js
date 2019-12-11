@@ -11,14 +11,7 @@ import Menu from '../components/Menu';
 import PopularArticles from '../components/PopularArticles';
 
 const useStyles = makeStyles(theme => ({
-    root: {
-        flexGrow: 1,
-    },
-    paper: {
-        padding: theme.spacing(2),
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
-    },
+    
     card: {
         maxWidth: '100%',
         display: 'flex',
