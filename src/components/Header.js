@@ -153,13 +153,9 @@ export default function Header() {
                                 style={{ backgroundColor: "", color: "#616161" }}
                             />
                         </div>
-
                         <IconButton aria-label="delete" color="action">
                             <NotificationsNoneIcon fontSize="medium" />
                         </IconButton>
-                        {/* <Button variant="outlined" size="small" className={buttonClasses.margin}>
-                                Upgrade
-                            </Button> */}
                         <div className={avaClasses.root}>
                             <Avatar className={avaClasses.green}>R</Avatar>
                         </div>

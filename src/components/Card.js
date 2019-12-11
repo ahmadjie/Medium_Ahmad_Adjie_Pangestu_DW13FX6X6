@@ -31,9 +31,6 @@ export default function SimpleCard() {
             <CardContent>
 
             </CardContent>
-            {/* <CardActions> */}
-            {/* <Button size="small">Learn More</Button> */}
-            {/* </CardActions> */}
         </Card>
     );
 }

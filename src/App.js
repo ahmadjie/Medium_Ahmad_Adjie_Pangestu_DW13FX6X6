@@ -1,4 +1,4 @@
-import React from 'react';
+import React ,{Component} from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,21 +10,23 @@ import Login from "./pages/Login"
 import Home from "./pages/Home";
 
 
-export default function App() {
-  return (
-    <Router>
-      <Switch>
-        <Route path="/register">
-          <Register />
-        </Route>
-        <Route path="/login">
-          <Login />
-        </Route>
+export default class App extends Component {
 
-        <Route path="/">
-          <Home />
-        </Route>
-      </Switch>
-    </Router>
-  )
+  render(){
+    return (
+      <Router>
+        <Switch>
+          <Route path="/register">
+            <Register />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </Router>
+    );
+  }
 }

@@ -57,22 +57,11 @@ export default function Register() {
 
     render(); {
         return (
-
             <div>
-                <Grid
-                    container
-                    direction="column"
-                    justify="center"
-                    alignItems="center"
-                >
+                <Grid container direction="column" justify="center" alignItems="center">
                     <Card className={cardClasses.card} style={{ marginTop: "100px" }}>
                         <CardContent>
-                            <Grid
-                                container
-                                direction="column"
-                                justify="center"
-                                alignItems="center"
-                            >
+                            <Grid container direction="column" justify="center" alignItems="center">
                                 <form className={formClasses.root} noValidate autoComplete="off" fullWidth style={{ textAlign: "center", itemAlign: "center" }}>
                                     <div className={typographyClasses.root} >
                                         <Typography variant="h4" gutterBottom>
@@ -86,9 +75,9 @@ export default function Register() {
                                     <TextField id="standard-basic" label="Password" required type="password" /><br />
                                     <Button variant="outlined">Login</Button>
                                     <div className={typographyClasses.root} >
-                                        <Typography variant="h6" gutterBottom>
-                                            Already have an account? <Link to="/register" style={{ textDecoration: "none", color: "black" }} required>Register</Link>
-                                        </Typography>
+                                        <p>
+                                           Don't have an account? <Link to="/register" style={{ textDecoration: "none", color: "black" }} required>Register</Link>
+                                        </p>
                                         <Link to="/">
                                             <img src={logo} width={85} height={85} />
                                         </Link>

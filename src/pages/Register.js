@@ -1,4 +1,4 @@
-import React from 'react';
+import React ,{Component} from 'react';
 import {
     BrowserRouter as Router,
     Switch,
@@ -60,21 +60,10 @@ export default function Register() {
         return (
 
             <div>
-                <Grid
-                    container
-                    direction="column"
-                    justify="center"
-                    alignItems="center"
-                >
+                <Grid container direction="column" justify="center" alignItems="center">
                     <Card className={cardClasses.card} style={{ marginTop: "75px" }}>
                         <CardContent>
-                            <Grid
-                                container
-                                direction="column"
-                                justify="center"
-                                alignItems="center"
-                                
-                            >
+                            <Grid container direction="column" justify="center" alignItems="center">
                                 <form className={formClasses.root} noValidate autoComplete="off" fullWidth style={{ textAlign: "center", itemAlign: "center" }}>
                                     <div className={typographyClasses.root} >
                                         <Typography variant="h4" gutterBottom>
@@ -89,9 +78,9 @@ export default function Register() {
                                     <TextField id="standard-basic" label="Password" required type="password" /><br />
                                     <Button variant="outlined">Signup</Button>
                                     <div className={typographyClasses.root} >
-                                        <Typography variant="h6" gutterBottom>
+                                        <p>
                                             Already have an account? <Link to="/login" style={{ textDecoration: "none", color: "black" }} required>Login</Link>
-                                        </Typography>
+                                        </p>
                                         <Link to="/">
                                             <img src={logo} width={85} height={85} />
                                         </Link>
@@ -102,7 +91,6 @@ export default function Register() {
                     </Card>
                 </Grid>
             </div>
-
         );
     }
 }

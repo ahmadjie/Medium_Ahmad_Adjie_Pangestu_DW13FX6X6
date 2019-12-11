@@ -10,7 +10,6 @@ import Header from '../components/Header';
 import Menu from '../components/Menu';
 import PopularArticles from '../components/PopularArticles';
 
-
 const useStyles = makeStyles(theme => ({
     root: {
         flexGrow: 1,
@@ -31,14 +30,9 @@ const useStyles = makeStyles(theme => ({
         height: 140,
     },
     cover: {
-        width: 151,
+        width: "25%",
     },
-    cover2: {
-        width: "450px",
-    },
-    content: {
-        flex: '1 0 auto',
-    },
+
 
 }));
 
@@ -47,18 +41,15 @@ export default function Home() {
 
     return (
         <div style={{ margin: "auto", width: "75%" }}>
-            
+
             <Header />
             <Menu />
             <Grid container spacing={0}>
+                {/* LEFT */}
                 <Grid item xs={4} >
-                    <Card className={classes.card}>
+                    <Grid className={classes.card}>
                         <CardActionArea>
-                            <CardMedia
-                                className={classes.media}
-                                image="http://hdqwalls.com/wallpapers/fire-minimalist-1f.jpg"
-                                title="Contemplative Reptile"
-                            />
+                            <CardMedia className={classes.media} image="http://hdqwalls.com/wallpapers/fire-minimalist-1f.jpg" title="Contemplative Reptile"/>
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="h2">
                                     Psychologists Explain How To Stop Overthinking Everything
@@ -68,73 +59,60 @@ export default function Home() {
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
-                    </Card>
+                    </Grid>
                 </Grid>
 
-                <Grid item xs={4}>
+                {/* CENTER */}
 
-                    <Card className={classes.card}>
-                        <CardMedia
-                            className={classes.cover}
-                            image="http://hdqwalls.com/wallpapers/fire-minimalist-1f.jpg"
-                            title="Live from space album cover"
-                        />
+                <Grid item xs={4} container direction="row" justify="flex-start" alignItems="flex-start">
+                    <div className={classes.card} style = {{width: "100%"}}>
+                        <CardMedia className={classes.cover} image="http://hdqwalls.com/wallpapers/fire-minimalist-1f.jpg" title="Live from space album cover" />
                         <div className={classes.details}>
                             <CardContent className={classes.content}>
-                                <Typography component="h8" variant="h8">
-                                The End of Snap and Tesla
+                                <Typography variant="overline" display="block">
+                                    The End of Snap and Tesla
                                 </Typography>
                                 <Typography variant="subtitle1" color="textSecondary">
                                     Mac Miller
                                 </Typography>
                             </CardContent>
                         </div>
-                    </Card>
-                    <Card className={classes.card}>
-                        <CardMedia
-                            className={classes.cover}
-                            image="https://i.pinimg.com/originals/07/8d/a1/078da18c6580c35679044cb8949843d8.jpg"
-                            title="Live from space album cover"
-                        />
+                    </div>
+                    <div className={classes.card} style = {{width: "100%"}}>
+                        <CardMedia className={classes.cover} image="http://hdqwalls.com/wallpapers/fire-minimalist-1f.jpg" title="Live from space album cover" />
                         <div className={classes.details}>
                             <CardContent className={classes.content}>
-                                <Typography component="h8" variant="h8">
-                                Laziness Does Not Exist
+                                <Typography variant="overline" display="block">
+                                    The End of Snap and Tesla
                                 </Typography>
                                 <Typography variant="subtitle1" color="textSecondary">
                                     Mac Miller
                                 </Typography>
                             </CardContent>
                         </div>
-                    </Card>
-                    <Card className={classes.card}>
-                        <CardMedia
-                            className={classes.cover}
-                            image="https://www.itl.cat/pngfile/big/7-75338_abstract-minimalist-minimalist-wallpaper-red.png"
-                            title="Live from space album cover"
-                        />
+                    </div>
+                    <div className={classes.card} style = {{width: "100%"}}>
+                        <CardMedia className={classes.cover} image="http://hdqwalls.com/wallpapers/fire-minimalist-1f.jpg" title="Live from space album cover" />
                         <div className={classes.details}>
                             <CardContent className={classes.content}>
-                                <Typography component="h8" variant="h8">
-                                    Live From Space
+                                <Typography variant="overline" display="block">
+                                    The End of Snap and Tesla
                                 </Typography>
                                 <Typography variant="subtitle1" color="textSecondary">
                                     Mac Miller
                                 </Typography>
                             </CardContent>
                         </div>
-                    </Card>
+                    </div>
 
                 </Grid>
 
+                {/* RIGHT */}
+
                 <Grid item xs={4}>
-                    <Card className={classes.card}>
+                    <Grid className={classes.card}>
                         <CardActionArea>
-                            <CardMedia
-                                className={classes.media}
-                                image="http://hdqwalls.com/wallpapers/fire-minimalist-1f.jpg"
-                                title="Contemplative Reptile"
-                            />
+                            <CardMedia className={classes.media} image="http://hdqwalls.com/wallpapers/fire-minimalist-1f.jpg" title="Contemplative Reptile" />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="h2">
                                     Lizard
@@ -143,19 +121,14 @@ export default function Home() {
                                     Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
                                     across all continents except Antarctica
                                 </Typography>
-                                <Grid
-                                    container
-                                    direction="row-reverse"
-                                    justify="flex-start"
-                                    alignItems="flex-end"
-                                >
-                                        <Typography variant="overline" display="block" color='primary' gutterBottom>
-                                            see all featured >
-                                        </Typography>
-                                </Grid>       
+                                <Grid container direction="row-reverse" justify="flex-start" alignItems="flex-end">
+                                    <Typography variant="overline" display="block" color='primary' gutterBottom>
+                                        see all featured >
+                                    </Typography>
+                                </Grid>
                             </CardContent>
                         </CardActionArea>
-                    </Card>
+                    </Grid>
                 </Grid>
             </Grid>
             <PopularArticles />

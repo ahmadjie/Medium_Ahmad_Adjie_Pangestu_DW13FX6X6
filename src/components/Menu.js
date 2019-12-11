@@ -6,6 +6,12 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -66,8 +72,9 @@ export default function Menu() {
                         scrollButtons="auto"
                         aria-label="scrollable auto tabs example"
                     >
-
-                        <Tab label="OneZero" {...a11yProps(0)} />
+                        <Link to="/login" style={{textDecoration:"none",color:"black"}}>
+                            <Tab label="OneZero" {...a11yProps(0)} />
+                        </Link>
                         <Tab label="Elemental" {...a11yProps(1)} />
                         <Tab label="Gen" {...a11yProps(2)} />
                         <Tab label="zora" {...a11yProps(3)} />
