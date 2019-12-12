@@ -8,8 +8,6 @@ import { lightGreen } from '@material-ui/core/colors';
 import logo from '../img/medium.svg';
 import {
     BrowserRouter as Router,
-    Switch,
-    Route,
     Link
 } from "react-router-dom";
 import NotificationsNoneIcon from '@material-ui/icons/NotificationsNone';
@@ -18,48 +16,16 @@ import SearchIcon from '@material-ui/icons/Search';
 import InputBase from '@material-ui/core/InputBase';
 
 const appBarStyles = makeStyles(theme => ({
-    root: {
-        flexGrow: 1,
-    },
-    menuButton: {
-        marginRight: theme.spacing(2),
-    },
+
     title: {
         flexGrow: 1,
     },
 }));
 
-const cardStyles = makeStyles({
-    card: {
-        minWidth: 275,
-    },
-    bullet: {
-        display: 'inline-block',
-        margin: '0 2px',
-        transform: 'scale(0.8)',
-    },
-    title: {
-        fontSize: 14,
-    },
-    pos: {
-        marginBottom: 12,
-    },
-});
 
-const typographyStyles = makeStyles({
-    root: {
-        width: '100%',
-        maxWidth: 500,
-    },
-});
 
 const avaStyles = makeStyles(theme => ({
-    root: {
-        display: 'flex',
-        '& > *': {
-            margin: theme.spacing(1),
-        },
-    },
+
     green: {
         color: '#fff',
         backgroundColor: lightGreen[800],
@@ -67,14 +33,6 @@ const avaStyles = makeStyles(theme => ({
 
 }));
 
-const buttonStyles = makeStyles(theme => ({
-    margin: {
-        margin: theme.spacing(1),
-    },
-    extendedIcon: {
-        marginRight: theme.spacing(1),
-    },
-}));
 
 const useStyles = makeStyles(theme => ({
     search: {
@@ -119,18 +77,13 @@ const useStyles = makeStyles(theme => ({
 
 export default function Header() {
     const appBarClasses = appBarStyles();
-    const cardClasses = cardStyles();
     const avaClasses = avaStyles();
-    const buttonClasses = buttonStyles();
     const classes = useStyles();
-    // aktifin ini kalau mau make typography kaya h1 h2
-    // const typographyClasses = typographyStyles();
-
 
     return (
 
-        <div className={appBarClasses.root}>
-            <AppBar position="static" style={{ backgroundColor: "white", boxShadow:'none' }}>
+        <div>
+            <AppBar position="static" style={{ backgroundColor: "white", boxShadow: 'none' }}>
                 <div style={{ margin: "auto", width: "100%" }}>
                     <Toolbar>
                         <Typography variant="h6" className={appBarClasses.title} >

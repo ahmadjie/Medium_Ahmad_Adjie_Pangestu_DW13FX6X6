@@ -37,31 +37,25 @@ export default function Menu() {
         setValue(newValue);
     };
 
-    const tabLabels = ["OneZero", "Elemental", "Gen", "zora", "human parts", "forge", "marker", "level", "heated", "modus", "more"];
-
-    function nameLabels() {
-        tabLabels.map((label, index) => {
-            return (
-                <Link to="/categorypages" style={{ textDecoration: "none", color: "black" }}>
-                    <Tab label={label} {...a11yProps(index)} />
-                </Link>
-            );
-        })
-    }
+    const tabLabels = ["OneZero", "Elemental", "Subscribe"];
 
     return (
         <div className={classes.root}>
-            <AppBar position="static" color="inherit" style={{ boxShadow: "none" }}>
+            <AppBar position="static" color="inherit" style={{ boxShadow: "none", marginTop: "1%" }}>
                 <div style={{ margin: "auto", width: "100%" }}>
                     <Tabs
                         value={value}
                         onChange={handleChange}
                         indicatorColor="textPrimary"
                         textColor="textPrimary"
-                        variant="scrollable"
-                        scrollButtons="auto"
+                        variant="standart"
+                        scrollButtons="scroll"
                         aria-label="scrollable auto tabs example"
                     >
+                        <Link to="/">
+                            <img src="https://miro.medium.com/max/216/1*IPEsgX_bZKP_7OubdnI7-Q.png" width={216} height={36} />
+                        </Link>
+
                         {
                             tabLabels.map((item, index) => {
                                 return (

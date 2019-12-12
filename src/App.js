@@ -9,12 +9,14 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import CategoryPages from './pages/CategoryPages';
 import Home from "./pages/Home";
-
-
+import Articles from "./pages/Articles";
 
 export default class App extends Component {
 
+
+
   render() {
+
     return (
       <Router>
         <Switch>
@@ -26,6 +28,9 @@ export default class App extends Component {
           </Route>
           <Route path="/categorypages">
             <CategoryPages />
+          </Route>
+          <Route path="/articles">
+            <Articles />
           </Route>
           <Route path="/">
             <Home />

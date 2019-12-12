@@ -8,14 +8,8 @@ import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 
 const useStyles = makeStyles(theme => ({
-    root: {
-        flexGrow: 1,
-    },
-    paper: {
-        padding: theme.spacing(2),
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
-    },
+
+
     card: {
         maxWidth: '100%',
         display: 'flex',
@@ -29,9 +23,6 @@ const useStyles = makeStyles(theme => ({
     cover: {
         width: 151,
     },
-    cover2: {
-        width: "450px",
-    }
 
 }));
 
@@ -44,7 +35,7 @@ export default function PopularArticles() {
                 <Grid container item xs={10}>
                     <Grid className={classes.card}>
                         <CardContent>
-                            <Typography variant="overline" color="inherit" gutterBottom>
+                            <Typography variant="overline" color="inherit">
                                 creatifity
                             </Typography>
                             <Typography variant="h5" color="textPrimary">
@@ -55,34 +46,34 @@ export default function PopularArticles() {
                 </Grid>
                 <Grid container item xs={2} >
                     <Card className={classes.card}>
-                        <CardMedia className={classes.cover} image="http://hdqwalls.com/wallpapers/fire-minimalist-1f.jpg" title="Live from space album cover" style={{ itemAlign: 'right', justifyContent: 'right' }}/>
+                        <CardMedia className={classes.cover} image="http://hdqwalls.com/wallpapers/fire-minimalist-1f.jpg" title="Live from space album cover" style={{ itemAlign: 'right', justifyContent: 'right' }} />
                     </Card>
                 </Grid>
                 <Grid container item xs={10}>
                     <Grid className={classes.card}>
-                        <CardContent className={classes.content}>
+                        <CardContent>
                             <Typography variant="overline" color="inherit" gutterBottom>
-                                    psychology
+                                psychology
                             </Typography>
                             <Typography variant="h5" color="textPrimary">
-                                    The End of Snap and Tesla
+                                The End of Snap and Tesla
                             </Typography>
                         </CardContent>
                     </Grid>
                 </Grid>
                 <Grid container item xs={2}>
                     <Card className={classes.card}>
-                        <CardMedia className={classes.cover} image="https://i.pinimg.com/originals/07/8d/a1/078da18c6580c35679044cb8949843d8.jpg" title="Live from space album cover" style={{ itemAlign: 'right', justifyContent: 'right' }}/>
+                        <CardMedia className={classes.cover} image="https://i.pinimg.com/originals/07/8d/a1/078da18c6580c35679044cb8949843d8.jpg" title="Live from space album cover" style={{ itemAlign: 'right', justifyContent: 'right' }} />
                     </Card>
                 </Grid>
                 <Grid container item xs={10}>
                     <Grid className={classes.card}>
-                        <CardContent className={classes.content}>
-                        <Typography variant="overline" color="inherit" gutterBottom>
-                             business
+                        <CardContent>
+                            <Typography variant="overline" color="inherit" gutterBottom>
+                                business
                         </Typography>
-                        <Typography variant="h5" color="textPrimary">
-                            Laziness Does Not Exist
+                            <Typography variant="h5" color="textPrimary">
+                                Laziness Does Not Exist
                         </Typography>
                         </CardContent>
                     </Grid>
@@ -90,16 +81,16 @@ export default function PopularArticles() {
                 <Grid container item xs={2}>
                     <Card className={classes.card}>
                         <CardMedia className={classes.cover} image="https://www.itl.cat/pngfile/big/7-75338_abstract-minimalist-minimalist-wallpaper-red.png"
-                        title="Live from space album cover" style={{ itemAlign: 'right', justifyContent: 'right' }}/>
+                            title="Live from space album cover" style={{ itemAlign: 'right', justifyContent: 'right' }} />
                     </Card>
                 </Grid>
             </Grid>
             <Grid container direction="row" justify="flex-start" alignItems="flex-start" item xs={3}>
                 <Grid container direction="row" justifyContent="left" alignItems="left" item xs={12}>
                     <Grid className={classes.card}>
-                        <CardContent className={classes.content}>
-                             <Typography variant="h6" color="textPrimary">
-                                 Popular On Medium
+                        <CardContent>
+                            <Typography variant="h6" color="textPrimary">
+                                Popular On Medium
                             </Typography>
                         </CardContent>
                     </Grid>
@@ -112,7 +103,7 @@ export default function PopularArticles() {
                         <h1 style={{ justifyContent: 'center', color: '#bdbdbd' }}>03</h1>
                         <h1 style={{ justifyContent: 'center', color: '#bdbdbd' }}>04</h1>
                     </Grid>
-                    <Grid container direction="row" justifyContent="left" alignItems="left"item xs={9}>
+                    <Grid container direction="row" justifyContent="left" alignItems="left" item xs={9}>
                         <p style={{ fontSize: '12px', fontWeight: 'bold' }}>
                             A Nude ‘Playboy’ Photo Has Been a Mainstay in Testing Tech for Decades
                         </p>

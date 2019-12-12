@@ -1,7 +1,6 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -11,7 +10,7 @@ import Menu from '../components/Menu';
 import PopularArticles from '../components/PopularArticles';
 
 const useStyles = makeStyles(theme => ({
-    
+
     card: {
         maxWidth: '100%',
         display: 'flex',
@@ -34,7 +33,6 @@ export default function Home() {
 
     return (
         <div style={{ margin: "auto", width: "75%" }}>
-
             <Header />
             <Menu />
             <Grid container spacing={0}>
@@ -42,7 +40,7 @@ export default function Home() {
                 <Grid item xs={4} >
                     <Grid className={classes.card}>
                         <CardActionArea>
-                            <CardMedia className={classes.media} image="http://hdqwalls.com/wallpapers/fire-minimalist-1f.jpg" title="Contemplative Reptile"/>
+                            <CardMedia className={classes.media} image="http://hdqwalls.com/wallpapers/fire-minimalist-1f.jpg" title="Contemplative Reptile" />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="h2">
                                     Psychologists Explain How To Stop Overthinking Everything
@@ -58,7 +56,7 @@ export default function Home() {
                 {/* CENTER */}
 
                 <Grid item xs={4} container direction="row" justify="flex-start" alignItems="flex-start">
-                    <div className={classes.card} style = {{width: "100%"}}>
+                    <div className={classes.card} style={{ width: "100%" }}>
                         <CardMedia className={classes.cover} image="http://hdqwalls.com/wallpapers/fire-minimalist-1f.jpg" title="Live from space album cover" />
                         <div className={classes.details}>
                             <CardContent className={classes.content}>
@@ -71,8 +69,8 @@ export default function Home() {
                             </CardContent>
                         </div>
                     </div>
-                    <div className={classes.card} style = {{width: "100%"}}>
-                        <CardMedia className={classes.cover} image="http://hdqwalls.com/wallpapers/fire-minimalist-1f.jpg" title="Live from space album cover" />
+                    <div className={classes.card} style={{ width: "100%" }}>
+                        <CardMedia className={classes.cover} image="https://www.itl.cat/pngfile/big/7-75338_abstract-minimalist-minimalist-wallpaper-red.png" title="Live from space album cover" />
                         <div className={classes.details}>
                             <CardContent className={classes.content}>
                                 <Typography variant="overline" display="block">
@@ -84,8 +82,8 @@ export default function Home() {
                             </CardContent>
                         </div>
                     </div>
-                    <div className={classes.card} style = {{width: "100%"}}>
-                        <CardMedia className={classes.cover} image="http://hdqwalls.com/wallpapers/fire-minimalist-1f.jpg" title="Live from space album cover" />
+                    <div className={classes.card} style={{ width: "100%" }}>
+                        <CardMedia className={classes.cover} image="https://i.pinimg.com/originals/07/8d/a1/078da18c6580c35679044cb8949843d8.jpg" title="Live from space album cover" />
                         <div className={classes.details}>
                             <CardContent className={classes.content}>
                                 <Typography variant="overline" display="block">
