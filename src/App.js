@@ -8,6 +8,7 @@ import Articles from './pages/Articles';
 import Follow from './components/Follow';
 import Comment from './pages/Comment';
 import RelatedArticles from './components/RelatedArticles';
+import NewStory from './pages/NewStory';
 
 export default class App extends Component {
 	render() {
@@ -34,6 +35,9 @@ export default class App extends Component {
 					</Route>
 					<Route path="/relatedarticles">
 						<RelatedArticles />
+					</Route>
+					<Route path="/newstory">
+						<NewStory />
 					</Route>
 					<Route path="/">
 						<Home />
