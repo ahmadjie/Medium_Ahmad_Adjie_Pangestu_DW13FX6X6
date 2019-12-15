@@ -9,6 +9,7 @@ import Follow from './components/Follow';
 import Comment from './pages/Comment';
 import RelatedArticles from './components/RelatedArticles';
 import NewStory from './pages/NewStory';
+import Story from './pages/Story';
 
 export default class App extends Component {
 	render() {
@@ -38,6 +39,9 @@ export default class App extends Component {
 					</Route>
 					<Route path="/newstory">
 						<NewStory />
+					</Route>
+					<Route path="/story">
+						<Story />
 					</Route>
 					<Route path="/">
 						<Home />
