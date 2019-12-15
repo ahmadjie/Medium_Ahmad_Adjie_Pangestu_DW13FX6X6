@@ -39,19 +39,9 @@ export default function Menu() {
 
     const tabLabels = ["OneZero", "Elemental", "Gen", "zora", "human parts", "forge", "marker", "level", "heated", "modus", "more"];
 
-    function nameLabels() {
-        tabLabels.map((label, index) => {
-            return (
-                <Link to="/categorypages" style={{ textDecoration: "none", color: "black" }}>
-                    <Tab label={label} {...a11yProps(index)} />
-                </Link>
-            );
-        })
-    }
-
     return (
         <div className={classes.root}>
-            <AppBar position="static" color="inherit" style={{ boxShadow: "none" }}>
+            <AppBar position="static" color="inherit" style={{ boxShadow: "none", marginBottom:"40px"}}>
                 <div style={{ margin: "auto", width: "100%" }}>
                     <Tabs
                         value={value}

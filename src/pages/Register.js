@@ -32,36 +32,36 @@ export default class Register extends Component {
     render() {
         return (
 
-                <Grid container direction="column" justify="center" alignItems="center" style={{backgroundColor:"#eeeeee"}}>
-                    <Card className={cardStyles.card} style = {{margin:"9%",width:"50%"}}>
-                        <CardContent>
-                            <Grid container direction="column" justify="center" alignItems="center">
-                                <form autoComplete="off" fullWidth style={{ textAlign: "center", itemAlign: "center" }}>
-                                    <div style={{ width: "75%", margin: "auto" }}>
-                                        <Typography variant="h4">
-                                            Join Medium
+            <Grid container direction="column" justify="center" alignItems="center" style={{ backgroundColor: "#eeeeee" }}>
+                <Card className={cardStyles.card} style={{ margin: "9%", width: "50%" }}>
+                    <CardContent>
+                        <Grid container direction="column" justify="center" alignItems="center">
+                            <form autoComplete="off" fullWidth style={{ textAlign: "center", itemAlign: "center", marginTop: "4%" }}>
+                                <div style={{ width: "75%", margin: "auto" }}>
+                                    <Typography variant="h4">
+                                        Join Medium
                                         </Typography>
-                                        <Typography variant="caption" display="block" >
-                                            Create an account to receive great stories in your inbox, personalize your homepage, and follow authors and topics that you love.
+                                    <Typography variant="caption" display="block" >
+                                        Create an account to receive great stories in your inbox, personalize your homepage, and follow authors and topics that you love.
                                         </Typography>
-                                    </div>
-                                    <TextField id="standard-basic" label="Fullname" required /><br />
-                                    <TextField id="standard-basic" label="Username" required /><br />
-                                    <TextField id="standard-basic" label="Password" required type="password" style={{ marginBottom: "20px" }} /><br />
-                                    <Button variant="outlined">Signup</Button>
-                                    <div className={typographyStyles.root} >
-                                        <p>
-                                            Already have an account? <Link to="/login" style={{ textDecoration: "none", color: "black" }} required>Login</Link>
-                                        </p>
-                                        <Link to="/">
-                                            <img src={logo} width={85} height={85} />
-                                        </Link>
-                                    </div>
-                                </form>
-                            </Grid>
-                        </CardContent>
-                    </Card>
-                </Grid>
+                                </div>
+                                <TextField id="standard-basic" label="Fullname" required style={{ width: "50%" }} /><br />
+                                <TextField id="standard-basic" label="Username" required style={{ width: "50%" }} /><br />
+                                <TextField id="standard-basic" label="Password" required type="password" style={{ width: "50%" }} /><br />
+                                <Button variant="outlined" style={{ width: "50%" }}>Signup</Button>
+                                <div className={typographyStyles.root} >
+                                    <p>
+                                        Already have an account? <Link to="/login" style={{ textDecoration: "none", color: "black" }} required>Login</Link>
+                                    </p>
+                                    <Link to="/">
+                                        <img src={logo} style={{ width: "15%" }} />
+                                    </Link>
+                                </div>
+                            </form>
+                        </Grid>
+                    </CardContent>
+                </Card>
+            </Grid>
 
         );
     }

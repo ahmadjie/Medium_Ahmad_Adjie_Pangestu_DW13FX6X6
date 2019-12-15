@@ -28,6 +28,40 @@ const useStyles = makeStyles(theme => ({
 
 }));
 
+
+const latestUpdateArticles = [
+    {
+        title: "Someone need someone",
+        author: "Adjie Jumaidi",
+        image: "http://hdqwalls.com/wallpapers/fire-minimalist-1f.jpg"
+    },
+    {
+        title: "Someone need coffee for get someone",
+        author: "Adjie asep",
+        image: "http://hdqwalls.com/wallpapers/fire-minimalist-1f.jpg"
+    },
+    {
+        title: "Someone need coffee for get someone",
+        author: "Adjie asep",
+        image: "http://hdqwalls.com/wallpapers/fire-minimalist-1f.jpg"
+    }
+]
+
+const popularArticlesRight = [{
+    title: "Contemplative Reptile",
+    content: "Overthinking can lead to serious emotional distress and increase your risk of mental health problems",
+    image: "http://hdqwalls.com/wallpapers/fire-minimalist-1f.jpg"
+}]
+
+
+
+const popularArticlesLeft = [{
+    title: "Contemplative Reptile",
+    content: "Overthinking can lead to serious emotional distress and increase your risk of mental health problems",
+    image: "http://hdqwalls.com/wallpapers/fire-minimalist-1f.jpg"
+}]
+
+
 export default function Home() {
     const classes = useStyles();
 
@@ -35,67 +69,62 @@ export default function Home() {
         <div style={{ margin: "auto", width: "75%" }}>
             <Header />
             <Menu />
-            <Grid container spacing={0}>
+            <Grid container spacing={3}>
                 {/* LEFT */}
                 <Grid item xs={4} >
                     <Grid className={classes.card}>
                         <CardActionArea>
-                            <CardMedia className={classes.media} image="http://hdqwalls.com/wallpapers/fire-minimalist-1f.jpg" title="Contemplative Reptile" />
-                            <CardContent>
-                                <Typography gutterBottom variant="h5" component="h2">
-                                    Psychologists Explain How To Stop Overthinking Everything
-                                </Typography>
-                                <Typography variant="body2" color="textSecondary" component="p">
-                                    Overthinking can lead to serious emotional distress and increase your risk of mental health problems
-                                </Typography>
-                            </CardContent>
+                            {
+                                popularArticlesLeft.map(popularArticleLeft => (
+                                    <>
+                                        <CardMedia className={classes.media} image={popularArticleLeft.image} title={popularArticleLeft.title} />
+                                        <CardContent>
+                                            <Typography gutterBottom variant="h5" component="h2">
+                                                {popularArticleLeft.title}
+                                            </Typography>
+                                            <Typography variant="body2" color="textSecondary" component="p">
+                                                {popularArticleLeft.content}
+                                            </Typography>
+                                        </CardContent>
+                                    </>
+                                ))
+                            }
                         </CardActionArea>
                     </Grid>
                 </Grid>
 
                 {/* CENTER */}
 
-                <Grid item xs={4} container direction="row" justify="flex-start" alignItems="flex-start">
-                    <div className={classes.card} style={{ width: "100%" }}>
-                        <CardMedia className={classes.cover} image="http://hdqwalls.com/wallpapers/fire-minimalist-1f.jpg" title="Live from space album cover" />
-                        <div className={classes.details}>
-                            <CardContent className={classes.content}>
-                                <Typography variant="overline" display="block">
-                                    The End of Snap and Tesla
-                                </Typography>
-                                <Typography variant="subtitle1" color="textSecondary">
-                                    Mac Miller
-                                </Typography>
-                            </CardContent>
-                        </div>
-                    </div>
-                    <div className={classes.card} style={{ width: "100%" }}>
-                        <CardMedia className={classes.cover} image="https://www.itl.cat/pngfile/big/7-75338_abstract-minimalist-minimalist-wallpaper-red.png" title="Live from space album cover" />
-                        <div className={classes.details}>
-                            <CardContent className={classes.content}>
-                                <Typography variant="overline" display="block">
-                                    The End of Snap and Tesla
-                                </Typography>
-                                <Typography variant="subtitle1" color="textSecondary">
-                                    Mac Miller
-                                </Typography>
-                            </CardContent>
-                        </div>
-                    </div>
-                    <div className={classes.card} style={{ width: "100%" }}>
-                        <CardMedia className={classes.cover} image="https://i.pinimg.com/originals/07/8d/a1/078da18c6580c35679044cb8949843d8.jpg" title="Live from space album cover" />
-                        <div className={classes.details}>
-                            <CardContent className={classes.content}>
-                                <Typography variant="overline" display="block">
-                                    The End of Snap and Tesla
-                                </Typography>
-                                <Typography variant="subtitle1" color="textSecondary">
-                                    Mac Miller
-                                </Typography>
-                            </CardContent>
-                        </div>
-                    </div>
+                <Grid item xs={4}>
+                    {
+                        latestUpdateArticles.map(latestUpdateArticle => (
+                            <div>
+                                <Grid container style={{marginBottom:"20px"}}>
+                                    <Grid item md={4} style={{ backgroundSize: "cover", backgroundPosition: "center", backgroundImage: `url(${latestUpdateArticle.image})` }}></Grid>
+                                    <Grid item md={8} style={{ padding: "0px 10px 0px 10px" }}>
+                                        <h4>
+                                            {latestUpdateArticle.title}
+                                        </h4>
+                                        <p>
+                                            {latestUpdateArticle.author}
+                                        </p>
+                                    </Grid>
+                                </Grid>
 
+                                {/* <CardMedia className={classes.cover} image={latestUpdateArticle.image} title={latestUpdateArticle.title} />
+                                <div className={classes.details}>
+                                    <CardContent className={classes.content}>
+                                        <h4>
+                                            {latestUpdateArticle.title}
+                                        </h4>
+                                        <p>
+                                            {latestUpdateArticle.author}
+                                        </p>
+                                    </CardContent>
+                                </div> */}
+                            </div>
+                        ))
+                    }
                 </Grid>
 
                 {/* RIGHT */}
@@ -103,21 +132,26 @@ export default function Home() {
                 <Grid item xs={4}>
                     <Grid className={classes.card}>
                         <CardActionArea>
-                            <CardMedia className={classes.media} image="http://hdqwalls.com/wallpapers/fire-minimalist-1f.jpg" title="Contemplative Reptile" />
-                            <CardContent>
-                                <Typography gutterBottom variant="h5" component="h2">
-                                    Lizard
-                                </Typography>
-                                <Typography variant="body2" color="textSecondary" component="p">
-                                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                                    across all continents except Antarctica
-                                </Typography>
-                                <Grid container direction="row-reverse" justify="flex-start" alignItems="flex-end">
-                                    <Typography variant="overline" display="block" color='primary' gutterBottom>
-                                        see all featured >
-                                    </Typography>
-                                </Grid>
-                            </CardContent>
+                            {
+                                popularArticlesRight.map(popularArticleRight => (
+                                    <>
+                                        <CardMedia className={classes.media} image={popularArticleRight.image} title={popularArticleRight.title} />
+                                        <CardContent>
+                                            <Typography gutterBottom variant="h5" component="h2">
+                                                {popularArticleRight.title}
+                                            </Typography>
+                                            <Typography variant="body2" color="textSecondary" component="p">
+                                                {popularArticleRight.content}
+                                            </Typography>
+                                            <Grid container direction="row-reverse" justify="flex-start" alignItems="flex-end">
+                                                <p>
+                                                    see all featured >
+                                                </p>
+                                            </Grid>
+                                        </CardContent>
+                                    </>
+                                ))
+                            }
                         </CardActionArea>
                     </Grid>
                 </Grid>

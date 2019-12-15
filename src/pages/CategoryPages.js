@@ -85,7 +85,6 @@ export default class CategoryPages extends Component {
                         </div>
                     </Grid>
 
-
                 </Grid>
 
                 <div style={{ width: "100%", margin: "3%" }}>
