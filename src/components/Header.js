@@ -159,7 +159,7 @@ export default function Header() {
 					<Toolbar>
 						<Typography variant="h6" className={appBarClasses.title}>
 							<Link to="/">
-								<img src={logo} width={85} height={45} />
+								<img src={logo} width={130} height={90} />
 							</Link>
 						</Typography>
 						<div className={classes.searchIcon}>
