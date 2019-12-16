@@ -12,6 +12,7 @@ import NewStory from './pages/NewStory';
 import Story from './pages/Story';
 import Stats from './pages/Stats';
 import Bookmarks from './pages/Bookmarks';
+import Profile from './pages/Profile';
 
 export default class App extends Component {
 	render() {
@@ -50,6 +51,9 @@ export default class App extends Component {
 					</Route>
 					<Route path="/bookmarks">
 						<Bookmarks />
+					</Route>
+					<Route path="/profile">
+						<Profile />
 					</Route>
 					<Route path="/">
 						<Home />
