@@ -26,61 +26,65 @@ const typographyStyles = makeStyles({
 export default class Register extends Component {
 	render() {
 		return (
-			<Grid
-				container
-				direction="column"
-				justify="center"
-				alignItems="center"
-				style={{ backgroundColor: '#eeeeee' }}
+			<div
+				style={{
+					display: 'flex',
+					justifyContent: 'center',
+					alignItems: 'center',
+					height: '100vh',
+					backgroundColor: '#eeeeee'
+				}}
 			>
-				<Card className={cardStyles.card} style={{ margin: '9%', width: '50%' }}>
-					<CardContent>
-						<Grid container direction="column" justify="center" alignItems="center">
-							<form
-								autoComplete="off"
-								fullWidth
-								style={{ textAlign: 'center', itemAlign: 'center', marginTop: '4%' }}
-							>
-								<div style={{ width: '70%', margin: 'auto' }}>
-									<Typography variant="h4">Sign in with username</Typography>
-									<Typography variant="caption" display="block">
-										Enter the email address essociated with your account, and we'll send a magic
-										link to your inbox
-									</Typography>
-								</div>
-								<TextField id="standard-basic" label="Username" required style={{ width: '50%' }} />
-								<br />
-								<TextField
-									id="standard-basic"
-									label="Password"
-									required
-									type="password"
-									style={{ width: '50%' }}
-								/>
-								<br />
-								<Button variant="outlined" style={{ marginTop: '5%', width: '50%' }}>
-									Login
-								</Button>
-								<div className={typographyStyles.root}>
-									<p>
-										Don't have an account?{' '}
-										<Link
-											to="/register"
-											style={{ textDecoration: 'none', color: 'black' }}
-											required
-										>
-											Register
+				<Grid item xs={12}>
+					<Card className={cardStyles.card} style={{ margin: 'auto', width: '50%' }}>
+						<CardContent>
+							<Grid container direction="column" justify="center" alignItems="center">
+								<form
+									autoComplete="off"
+									fullWidth
+									style={{ textAlign: 'center', itemAlign: 'center', marginTop: '4%' }}
+								>
+									<div style={{ width: '70%', margin: 'auto' }}>
+										<Typography variant="h4">Sign in with username</Typography>
+										<Typography variant="caption" display="block">
+											Enter the email address essociated with your account, and we'll send a magic
+											link to your inbox
+										</Typography>
+									</div>
+									<TextField id="standard-basic" label="Username" required style={{ width: '50%' }} />
+									<br />
+									<TextField
+										id="standard-basic"
+										label="Password"
+										required
+										type="password"
+										style={{ width: '50%' }}
+									/>
+									<br />
+									<Button variant="outlined" style={{ marginTop: '5%', width: '50%' }}>
+										Login
+									</Button>
+									<div className={typographyStyles.root}>
+										<p>
+											Don't have an account?{' '}
+											<Link
+												to="/register"
+												style={{ textDecoration: 'none', color: 'black' }}
+												required
+											>
+												Register
+											</Link>
+										</p>
+										<Link to="/">
+											<img src={logo} style={{ width: '15%' }} />
 										</Link>
-									</p>
-									<Link to="/">
-										<img src={logo} style={{ width: '15%' }} />
-									</Link>
-								</div>
-							</form>
-						</Grid>
-					</CardContent>
-				</Card>
-			</Grid>
+									</div>
+								</form>
+							</Grid>
+						</CardContent>
+					</Card>
+				</Grid>
+			</div>
 		);
 	}
 }
