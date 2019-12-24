@@ -7,7 +7,7 @@ import Avatar from '@material-ui/core/Avatar';
 class Profile extends Component {
 	render() {
 		return (
-			<div style={{ margin: 'auto', width: '100%', marginLeft: '3%' }}>
+			<div style={{ margin: 'auto', width: '100%', padding: '3%' }}>
 				<Grid
 					container
 					justify="flex-start"
@@ -29,7 +29,7 @@ class Profile extends Component {
 					</Grid>
 					<Grid item xs={4} style={{ width: 128, height: 128 }}>
 						<Avatar
-							style={{ width: 128, height: 128, marginTop: '6%', marginLeft: '16%' }}
+							style={{ width: 128, height: 128, marginTop: '6%', marginLeft: '75%' }}
 							src="https://www.itl.cat/pngfile/big/7-75338_abstract-minimalist-minimalist-wallpaper-red.png"
 						/>
 					</Grid>

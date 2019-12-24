@@ -10,7 +10,7 @@ class ArticleByPerson extends Component {
 			<div>
 				<Header />
 				<div style={{ display: 'flex', justifyContent: 'center' }}>
-					<Grid item xs={8}>
+					<Grid item xs={6}>
 						<Profile />
 						<TabArticleByPerson />
 					</Grid>
